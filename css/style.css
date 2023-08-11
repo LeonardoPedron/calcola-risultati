@@ -1,0 +1,146 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@200;300;400;500;600;700;800&display=swap');
+
+:root{
+    --background: #292b30;
+    --primary: #cfab4a;
+    --color: #fff;
+}
+
+*, *::after, *::before{margin:0; padding:0; box-sizing: border-box;font-family: 'Sono', sans-serif;}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: var(--background);
+}
+
+h1{
+    position: absolute;
+    top: 0;
+    display: block;
+}
+
+.container{
+    display: flex;
+    min-width: 80%;
+    height: 50%;
+    align-items: center;
+}
+
+#box0{
+    min-width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    flex-direction: column;
+    position: relative;
+}
+#box0 > p{
+    padding: 10px;
+    background-color: var(--primary);
+    margin: 5px 0px 5px 0px;
+    min-width: 80%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    border: 1px solid var(--primary);
+    cursor: pointer;
+    clip-path: polygon(
+        2rem 0,
+        calc(100% + 2rem) 0,
+        calc(100% - 2rem) 100%,
+        -2rem 100%
+    )
+    
+}
+
+
+#box1{
+    border-left: 1px solid #6d7d8a;
+    min-width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    flex-direction: column;
+    position: relative;
+}
+
+
+#box1 > form{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 50%;
+}
+
+#box1 > form > label{
+    font-size: 20px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+#box1 > form > input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin-bottom: 40px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid var(--primary);
+    outline: none;
+    background: transparent;
+    color: var(--primary);
+    font-size: 1.4em;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  margin-bottom: 40px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid var(--primary);
+    outline: none;
+    background: transparent;
+    color: var(--primary);
+    font-size: 1.4em;
+}
+
+#box1 > form > input[type=submit]{
+    background: #af913e;
+    outline: none;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    transition: all .3s ease-in-out;
+    font-family: 'Sono', sans-serif;
+    border: 1px solid #af913e;
+    clip-path: polygon(
+        2rem 0,
+        calc(100% + 2rem) 0,
+        calc(100% - 2rem) 100%,
+        -2rem 100%
+    )
+}
+
+#box1 > form > input[type=submit]:hover , p:hover{
+    background-color: var(--primary);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px var(--primary);
+    border: 1px solid white !important;
+}
+
+
+
